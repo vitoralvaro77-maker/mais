@@ -1,0 +1,171 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transforme Seu Corpo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0b0b;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #ff1e00, #a80000);
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .price-section {
+      margin-top: 1rem;
+    }
+    .price-section p {
+      font-size: 1.2rem;
+    }
+    .price-section .old-price {
+      text-decoration: line-through;
+      color: #aaa;
+    }
+    .price-section .new-price {
+      color: #ff1e00;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .cta-buttons {
+      margin: 1.5rem 0;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: #ff1e00;
+      transition: 0.3s;
+    }
+    .cta-buttons a:hover {
+      background: #cc1800;
+    }
+    .countdown {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      color: #ffbf00;
+    }
+    .depoimentos {
+      background: #141414;
+      padding: 2rem 1rem;
+    }
+    .depoimentos h2 {
+      color: #ff1e00;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .depoimentos img {
+      width: 280px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid #ff1e00;
+    }
+    .sobre {
+      padding: 2rem 1rem;
+    }
+    .sobre img {
+      width: 300px;
+      border-radius: 10px;
+      border: 3px solid #ff1e00;
+      margin-bottom: 1rem;
+    }
+    .sobre h2 {
+      color: #ff1e00;
+      font-size: 1.8rem;
+    }
+    footer {
+      background: #111;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TRANSFORME SEU CORPO</h1>
+  </header>
+
+  <section class="container">
+    <p>Você está prestes a dar o primeiro passo para mudar completamente o seu corpo e sua vida.</p>
+
+    <div class="price-section">
+      <p class="old-price">De R$197,00</p>
+      <p class="new-price">Por apenas R$37,90</p>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="https://pay.kiwify.com.br/Ha1Ato5" target="_blank">QUERO ME TRANSFORMAR AGORA</a>
+      <a href="https://wa.me/5537998760575" target="_blank">FALAR COM SUPORTE</a>
+    </div>
+
+    <div class="countdown">
+      Oferta válida pelas próximas <span id="timer">48:00:00</span> horas!
+    </div>
+  </section>
+
+  <section class="depoimentos">
+    <h2>RESULTADOS REAIS DE QUEM JÁ TRANSFORMOU O CORPO</h2>
+    <div>
+      <img src="chris-allen-antes-depois.webp" alt="Depoimento 1">
+      <img src="httpsrevistaanamaria.com_.brmediauploads2021-12nego-di-perde-30-quilos.jpg" alt="Depoimento 2">
+      <img src="paulinha.webp" alt="Depoimento 3">
+    </div>
+  </section>
+
+  <section class="sobre">
+    <h2>SOBRE O CRIADOR</h2>
+    <img src="WhatsApp Image 2025-07-01 at 23.38.00.jpeg" alt="Álvaro - Atleta de Fisiculturismo">
+    <p>
+      Meu nome é Álvaro, sou atleta de fisiculturismo e vivo no limite da performance todos os dias.<br><br>
+      Sei exatamente o que funciona e o que é perda de tempo — e foi por isso que criei o método <strong>Transforme Seu Corpo</strong>.<br><br>
+      Ele foi feito pra quem quer <strong>resultados reais</strong>, sem enrolação e sem fórmulas mágicas.<br><br>
+      Eu testei cada parte desse processo no meu próprio corpo, e posso te garantir:<br>
+      <strong>se você aplicar o método, vai mudar completamente o seu físico.</strong><br><br>
+      Essa é a minha promessa — porque eu já vivi essa transformação, e agora é a sua vez.
+    </p>
+
+    <div class="cta-buttons">
+      <a href="https://pay.kiwify.com.br/Ha1Ato5" target="_blank">GARANTIR MINHA VAGA AGORA</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Transforme Seu Corpo — Todos os direitos reservados.  
+    <br>Suporte: <a href="https://wa.me/5537998760575" style="color:#ff1e00;">WhatsApp</a>
+  </footer>
+
+  <script>
+    // Contador regressivo 48h
+    let time = 48 * 60 * 60;
+    const timer = document.getElementById("timer");
+    setInterval(() => {
+      const h = String(Math.floor(time / 3600)).padStart(2, '0');
+      const m = String(Math.floor((time % 3600) / 60)).padStart(2, '0');
+      const s = String(time % 60).padStart(2, '0');
+      timer.textContent = `${h}:${m}:${s}`;
+      if(time > 0) time--;
+    }, 1000);
+  </script>
+</body>
+</html>
+
